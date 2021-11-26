@@ -41,9 +41,7 @@ int tournerAvantGuauche(unsigned char vitesse,unsigned int duree)
     if(vitesse>60|| vitesse == 0){
         return -1;
     }
-    softPwmWrite (PIND, vitesse+40);
-    softPwmWrite (PING, vitesse+20);
-
+    softPwmWrite (PIND, vitesse+20);
     delay(duree);
     return 1;
 }
@@ -83,30 +81,6 @@ int main(){
 	pinMode(PING,OUTPUT);
 	softPwmCreate(PIND,1,200);
 	softPwmCreate(PING,0,200);
-
-	if(avancer(1,5000)!= 1)
-    {
-        printf("erreur\n");
-    }
-
-	if(reculer(3,5000)!= 1)
-    {
-        printf("erreur\n");
-    }
-    	if(arreter(10000)!= 1)
-    {
-        printf("erreur\n");
-    }
-    tournerAvantGuauche(30,5000);
-    arreter(1500);
-    tournerAvantDroite(60,5000);
-    arreter(1500);
-    tournerArriereDroit(5,5000);
-    arreter(1500);
-    tournerArriereGuauche(5,5000);
-    arreter(1505451540);
-
-
 
 return(0);
 }
