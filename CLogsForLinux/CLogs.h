@@ -20,8 +20,9 @@ private:
 public:
     CLogs();
 
-    void addLogs(double p_mouvement, double p_vitesse, double p_duree, double p_latitude,
-                 double p_longitude, double p_state, double p_timer);
+    void addLogs(double p_mouvement, double p_vitesse, double p_duree, double p_latitude, double p_longitude, double p_state, double p_timer);
+
+    double** getLogs();
 
 };
 
