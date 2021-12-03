@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1638517139 source:d:\snir2\mini tesla\cvehicule\cproximite.cpp
+	"CProximite.h"
+
+1638517161 d:\snir2\mini tesla\cvehicule\cproximite.h
+	<stdio.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<pcf8591.h>
+	<math.h>
+
+1638519138 source:d:\snir2\mini tesla\cvehicule\cvehicule.cpp
+	"Cvehicule.h"
+
+1638519138 d:\snir2\mini tesla\cvehicule\cvehicule.h
+	<string.h>
+	<stdio.h>
+	<wiringPi.h>
+	<stdio.h>
+	<softPwm.h>
+
+1638519416 source:d:\snir2\mini tesla\cvehicule\main.cpp
+	"CProximite.h"
+	"Cvehicule.h"
+
