@@ -98,33 +98,29 @@ double p_mouvement, double p_vitesse, double p_duree, double p_distance, double 
 
 int CVehicule::deplacer(int p_idMouvement, unsigned char p_vitesse, unsigned int p_duree)
 {
+	int verif;
     switch(p_idMouvement) {
         case AVANT:
-            if(avancer(p_vitesse, p_duree))
-                myLogs->addLogs(p_idMouvement, p_vitesse, p_duree, proximite->getDistance(), gps->getLastPositionMoy()[0], gps->getLastPositionMoy()[1], gps->getLocData()[0], gps->getLocData()[1], 10, 15);
+            verif = avancer(p_vitesse, p_duree);
             break;
         case ARRIERE:
-            if(reculer(p_vitesse, p_duree))
-                myLogs->addLogs(p_idMouvement, p_vitesse, p_duree, proximite->getDistance(), gps->getLastPositionMoy()[0], gps->getLastPositionMoy()[1], gps->getLocData()[0], gps->getLocData()[1], 10, 15);
+            verif = reculer(p_vitesse, p_duree);
             break;
         case AVANT_GAUCHE:
-            if(tournerAvantGauche(p_vitesse, p_duree))
-                myLogs->addLogs(p_idMouvement, p_vitesse, p_duree, proximite->getDistance(), gps->getLastPositionMoy()[0], gps->getLastPositionMoy()[1], gps->getLocData()[0], gps->getLocData()[1], 10, 15);
+            verif = tournerAvantGauche(p_vitesse, p_duree);
             break;
         case AVANT_DROITE:
-            if(tournerAvantDroite(p_vitesse, p_duree))
-                myLogs->addLogs(p_idMouvement, p_vitesse, p_duree, proximite->getDistance(), gps->getLastPositionMoy()[0], gps->getLastPositionMoy()[1], gps->getLocData()[0], gps->getLocData()[1], 10, 15);
+            verif = tournerAvantDroite(p_vitesse, p_duree);
             break;
         case ARRIERE_GAUCHE:
-            if(tournerArriereGauche(p_vitesse, p_duree))
-                myLogs->addLogs(p_idMouvement, p_vitesse, p_duree, proximite->getDistance(), gps->getLastPositionMoy()[0], gps->getLastPositionMoy()[1], gps->getLocData()[0], gps->getLocData()[1], 10, 15);
+            verif = tournerArriereGauche(p_vitesse, p_duree);
             break;
         case ARRIERE_DROITE:
-            if(tournerArriereDroite(p_vitesse, p_duree))
-                myLogs->addLogs(p_idMouvement, p_vitesse, p_duree, proximite->getDistance(), gps->getLastPositionMoy()[0], gps->getLastPositionMoy()[1], gps->getLocData()[0], gps->getLocData()[1], 10, 15);
+            verif = tournerArriereDroite(p_vitesse, p_duree);
             break;
         default:
             return -1;
     }
-    return 1;
+	verif == 1 ? myLogs->addLogs(p_idMouvement, p_vitesse, p_duree, proximite->getDistance(), gps->getLastPositionMoy()[0], gps->getLastPositionMoy()[1], gps->getLocData()[0], gps->getLocData()[1], 10, 15) : verif = -1;
+	return 1;
 }
