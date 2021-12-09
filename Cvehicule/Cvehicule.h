@@ -32,6 +32,14 @@ public:
     int tournerArriereGuauche(unsigned char vitesse,unsigned int duree);
     //
     int tournerArriereDroite(unsigned char vitesse,unsigned int duree);
+    //
+    int demitour();
+    //
+    int demitourSlide();
+    //
+    int tournerGuauche();
+    //
+    int tournerDroite();
 
 
 };
