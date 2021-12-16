@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calculatrice 2021-2022</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/calc.ico</normaloff>icons/calc.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Calculatrice 2021-2022</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <family>MS Sans Serif</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Entiers</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="4" column="0">
+         <widget class="QLineEdit" name="lineEdit_9"/>
+        </item>
+        <item row="4" column="6">
+         <widget class="QLineEdit" name="lineEdit_26"/>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="lineEdit_17"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLineEdit" name="lineEdit_7"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="lineEdit_11"/>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>0x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QPushButton" name="pushButton_6">
+          <property name="text">
+           <string>addition_INT_NS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>0x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="lineEdit_12"/>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>0x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QPushButton" name="pushButton_7">
+          <property name="text">
+           <string>addition_INT_S</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="text">
+           <string>addition_SHORT_S</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLineEdit" name="lineEdit_6"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEdit_2"/>
+        </item>
+        <item row="4" column="4">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>0x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="6">
+         <widget class="QLineEdit" name="lineEdit_25"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLineEdit" name="lineEdit_8"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="lineEdit_4"/>
+        </item>
+        <item row="6" column="2">
+         <widget class="QPushButton" name="pushButton_8">
+          <property name="text">
+           <string>module_INT_NS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="lineEdit_16"/>
+        </item>
+        <item row="5" column="6">
+         <widget class="QLineEdit" name="lineEdit_27"/>
+        </item>
+        <item row="5" column="4">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>0x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="text">
+           <string>addition_CHAR_S</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+        <item row="0" column="6">
+         <widget class="QLineEdit" name="lineEdit_22"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="lineEdit_14"/>
+        </item>
+        <item row="5" column="3">
+         <widget class="QLineEdit" name="lineEdit_20"/>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLineEdit" name="lineEdit_3"/>
+        </item>
+        <item row="1" column="6">
+         <widget class="QLineEdit" name="lineEdit_23"/>
+        </item>
+        <item row="4" column="3">
+         <widget class="QLineEdit" name="lineEdit_19"/>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="lineEdit_18"/>
+        </item>
+        <item row="6" column="3">
+         <widget class="QLineEdit" name="lineEdit_21"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_4">
+          <property name="text">
+           <string>addition_SHORT_NS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="6">
+         <widget class="QLineEdit" name="lineEdit_24"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEdit_10"/>
+        </item>
+        <item row="6" column="4">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>0x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="lineEdit_13"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="lineEdit_5"/>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="lineEdit_15"/>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="text">
+           <string>addition_CHAR_NS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>0x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="6">
+         <widget class="QLineEdit" name="lineEdit_28"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <attribute name="title">
+        <string>Booleens</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="3">
+         <widget class="QLineEdit" name="lineEdit_31"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="lineEdit_35"/>
+        </item>
+        <item row="4" column="3">
+         <widget class="QLineEdit" name="lineEdit_42"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLineEdit" name="lineEdit_40"/>
+        </item>
+        <item row="5" column="2">
+         <widget class="QPushButton" name="pushButton_15">
+          <property name="text">
+           <string>ET bit à bit</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="lineEdit_32"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_12">
+          <property name="text">
+           <string>NON</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_11">
+          <property name="text">
+           <string>ET</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEdit_30"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="lineEdit_29"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="pushButton_13">
+          <property name="text">
+           <string>OU bit à bit</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="lineEdit_34"/>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="lineEdit_36"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEdit_33"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLineEdit" name="lineEdit_38"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLineEdit" name="lineEdit_43"/>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="lineEdit_41"/>
+        </item>
+        <item row="4" column="2">
+         <widget class="QPushButton" name="pushButton_14">
+          <property name="text">
+           <string>OU Ex bit à bit</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <widget class="QLineEdit" name="lineEdit_45"/>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="lineEdit_39"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="lineEdit_44"/>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButton_10">
+          <property name="text">
+           <string>OU</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="lineEdit_37"/>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="lineEdit_46"/>
+        </item>
+        <item row="6" column="3">
+         <widget class="QLineEdit" name="lineEdit_47"/>
+        </item>
+        <item row="6" column="2">
+         <widget class="QPushButton" name="pushButton_16">
+          <property name="text">
+           <string>NON bit à bit</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Réels</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_18">
+          <property name="text">
+           <string>soustraction</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButton_17">
+          <property name="text">
+           <string>addition</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEdit_49"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="lineEdit_56"/>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="lineEdit_55"/>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="lineEdit_62"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="lineEdit_48"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="lineEdit_52"/>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="lineEdit_64"/>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLineEdit" name="lineEdit_51"/>
+        </item>
+        <item row="4" column="2">
+         <widget class="QPushButton" name="pushButton_21">
+          <property name="text">
+           <string>IEEE 754 32 bits</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QLineEdit" name="lineEdit_65"/>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLineEdit" name="lineEdit_63"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="lineEdit_57"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="lineEdit_54"/>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLineEdit" name="lineEdit_59"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="pushButton_20">
+          <property name="text">
+           <string>division</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLineEdit" name="lineEdit_60"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEdit_53"/>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLineEdit" name="lineEdit_50"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_19">
+          <property name="text">
+           <string>multiplication</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="lineEdit_58"/>
+        </item>
+        <item row="5" column="2">
+         <widget class="QPushButton" name="pushButton_22">
+          <property name="text">
+           <string>IEEE 754 64 bits</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <widget class="QLineEdit" name="lineEdit_66"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="lineEdit_61"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Conversions</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="lineEdit_67"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>BASE 2</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_9">
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="text">
+           <string>BASE 10</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>BASE 16</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLineEdit" name="lineEdit_68"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLineEdit" name="lineEdit_69"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>ASCII</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="lineEdit_71"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLineEdit" name="lineEdit_72"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_13">
+          <property name="maximumSize">
+           <size>
+            <width>1500</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Code Utf-8</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="lineEdit_70"/>
+        </item>
+        <item row="6" column="0" colspan="3">
+         <widget class="QPushButton" name="pushButton_23">
+          <property name="text">
+           <string>Table ASCII Etendue</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_14">
+          <property name="text">
+           <string>Caractère</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_12">
+          <property name="text">
+           <string>Code ASCII</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Code Unicode</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="lineEdit_73"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="text">
+       <string>Effacer</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Quitter</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
