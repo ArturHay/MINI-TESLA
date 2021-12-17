@@ -108,7 +108,7 @@ int Cvehicule::tournerGuauche()
 {
     softPwmWrite (PIN_DROITE,22);
     softPwmWrite (PIN_GAUCHE,80);
-    delay(1620);
+    delay(1800);
     return 1;
 }
 
@@ -116,7 +116,7 @@ int Cvehicule::tournerDroite()
 {
     softPwmWrite (PIN_DROITE,80);
     softPwmWrite (PIN_GAUCHE,22);
-    delay(1620);
+    delay(1840);
     return 1;
 }
 
