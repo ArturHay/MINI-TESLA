@@ -18,7 +18,7 @@ int main()
     // arrete le vehicule pendant 15 seconde
     vehicule1->deplacer(ARRET, -1, 15000);
 
-   // lancement du programme d'autonome 
+   // lancement du programme d'autonomie
     vehicule1->start();
 
     return (0);
