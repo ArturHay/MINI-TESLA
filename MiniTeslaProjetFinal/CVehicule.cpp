@@ -1,4 +1,5 @@
 #include "CVehicule.h"
+//constucteur 
 CVehicule::CVehicule()
 {
     wiringPiSetup();
@@ -11,6 +12,7 @@ CVehicule::CVehicule()
 	distanceGauche = new CProximite(2);
 
 }
+// destructeur 
 CVehicule::~CVehicule()
 {
 }
