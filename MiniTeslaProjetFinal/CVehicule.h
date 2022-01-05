@@ -30,8 +30,6 @@ private:
     bool arreter(unsigned int p_duree);
     // Le vehicule fait un demi-tour
     bool demiTour();
-    // Le vehicule fait un demi-tour rapide
-    bool demiTourSlide();
     // Fait tourner le vehicule à Gauche
     bool tournerGauche();
     // Fait tourner le vehicule à Droite
@@ -42,13 +40,13 @@ private:
     CProximite *distanceDroite;
 
 public:
-    //Constructeur par d�faut car pas de param�tre
+    //Constructeur
     CVehicule();
     //Destructeur
     ~CVehicule();
     // Fait deplacer le vehicule selon le mouvement la vitesse et la durée 
     bool deplacer(int p_mouvement, unsigned char p_vitesse, int p_duree);
-    // automatisation du vehicule 
+    // Lancement du vehicule
     void start();
 };
 
