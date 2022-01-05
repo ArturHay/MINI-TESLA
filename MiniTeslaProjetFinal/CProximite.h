@@ -17,21 +17,20 @@ class CProximite
 {
 private:
     int fd;
-    // conversion de Bit en volts
+    // Methode pour convertir le nombre sur 8 bits a volt
     double conversionBitToVolts(int voltsBit);
     //conversion des volts en distance
     double conversionVoltToDistance(double volts);
+    //Numero du port sur la carte I2C
     int m_port;
 
-
 public:
-    //Constructeur par defaut car pas de parametre
     CProximite();
     //Constructeur avec parametre
     CProximite(int p_port);
     //Destructeur
     ~CProximite();
-    //Recupere la distance calculer avec le capteur 
+    //Methode qui renvoie la distance 
     double getDistance();
 
 };
