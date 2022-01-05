@@ -39,7 +39,6 @@ void CVehicule::start()
         {
             distanceD = distanceDroite->getDistance();
             distanceG = distanceGauche->getDistance();
-            printf("Distance>1 && distance <21\ndistance= %.2lfcm\n", distanceD);
             if(mvGD == -1 && ((distanceD>1 && distanceD<21) || (distanceG>1 && distanceG<21)))
             {
                 reculer(12, 1000);
@@ -49,7 +48,6 @@ void CVehicule::start()
             else if(mvGD == DROITE && ((distanceD>1 && distanceD<21) || (distanceG>1 && distanceG<21)))
             {
                 demiTour();
-                printf("\n\nDEMI TOUR\n%.2lf cm.\n", distanceD);
                 mvGD = GAUCHE;
             }
             else if(mvGD == GAUCHE && ((distanceD>1 && distanceD<21) || (distanceG>1 && distanceG<21)))
@@ -57,7 +55,6 @@ void CVehicule::start()
                 tournerGauche();
                 mvGD = GAUCHE;
             }
-            printf("FIN MV:%d\n", mvGD);
             distanceD = distanceDroite->getDistance();
             distanceG = distanceGauche->getDistance();
             condition = ((distanceD>1 && distanceD<21) || (distanceG>1 && distanceG<21)) ? 1 : 0;
@@ -65,7 +62,6 @@ void CVehicule::start()
         }
         while(!condition)
         {
-            printf("ON AVANCE: distanceD = %.2lf cm\n", distanceD);
             avancer(30, 50);
             compteur++;
             if(compteur == 10) mvGD = -1;
