@@ -28,10 +28,10 @@ double CProximite::conversionBitToVolts(int voltsBit)
 //conversion des volts en distance
 double CProximite::conversionVoltToDistance(double volts)
 {
-    //Calcul de la distance: 63,1 * volts^-1,13 
     if(volts < LIMITVOLT){
         return 0;
     }
+    //Calcul de la distance: 63,1 * volts^-1,13 
     double distance = A_CONVERSION * pow(volts, PUISSANCE_CONVERSION);
     return(distance);
 }
