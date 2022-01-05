@@ -2,12 +2,14 @@
 //constucteur 
 CVehicule::CVehicule()
 {
-    wiringPiSetup();
+	wiringPiSetup();
+	
 	pinMode(PIN_DROITE,OUTPUT);
 	pinMode(PIN_GAUCHE,OUTPUT);
 	softPwmCreate(PIN_DROITE,1,200);
 	softPwmCreate(PIN_GAUCHE,0,200);
 
+	//Initialisation des deux capteurs de proximite
 	distanceDroite = new CProximite(1);
 	distanceGauche = new CProximite(2);
 
@@ -17,11 +19,10 @@ CVehicule::~CVehicule()
 {
 }
 
-//automatisation du vehicule 
+//Lancement du vehicule - Evite les obstacles
 void CVehicule::start()
 {
     int mvGD = -1;
-    int nbrGauche = 0;
     int compteur;
     double distanceD = 0;
     double distanceG = 0;
@@ -44,21 +45,17 @@ void CVehicule::start()
                 reculer(12, 1000);
                 tournerDroite();
                 mvGD = DROITE;
-                nbrGauche = 0;
             }
             else if(mvGD == DROITE && ((distanceD>1 && distanceD<21) || (distanceG>1 && distanceG<21)))
             {
                 demiTour();
                 printf("\n\nDEMI TOUR\n%.2lf cm.\n", distanceD);
                 mvGD = GAUCHE;
-                nbrGauche = 0;
             }
             else if(mvGD == GAUCHE && ((distanceD>1 && distanceD<21) || (distanceG>1 && distanceG<21)))
             {
                 tournerGauche();
                 mvGD = GAUCHE;
-                nbrGauche++;
-                if(nbrGauche == 2) for(int i=0; i<1; i++) demiTourSlide();
             }
             printf("FIN MV:%d\n", mvGD);
             distanceD = distanceDroite->getDistance();
@@ -80,24 +77,10 @@ void CVehicule::start()
     }
 }
 
-/*
 
-#define AVANT 0
-#define ARRIERE 1
-#define ARRET 2
-#define DEMI_TOUR 3
-#define DROITE 4
-#define GAUCHE 5
-
-*/
-
-
-// Fait deplacer le vehicule selon le mouvement la vitesse et la durée 
+// Methode qui permet de deplacer le vehicule
 bool CVehicule::deplacer(int p_mouvement, unsigned char p_vitesse, int p_duree)
 {
-    //double distance;
-    //bool etat = 0;
-    //bool verifDeplacement = 0;
     switch(p_mouvement) {
         case AVANT:
             avancer(p_vitesse, p_duree);
@@ -120,7 +103,6 @@ bool CVehicule::deplacer(int p_mouvement, unsigned char p_vitesse, int p_duree)
         default:
             return 0;
     }
-
     return 1;
 }
 
@@ -164,15 +146,6 @@ bool CVehicule::demiTour()
     softPwmWrite (PIN_DROITE,56);
     softPwmWrite (PIN_GAUCHE,8);
     delay(2450);
-    return 1;
-}
-
- // Le vehicule fait un demi-tour rapide
-bool CVehicule::demiTourSlide()
-{
-    softPwmWrite (PIN_DROITE,200);
-    softPwmWrite (PIN_GAUCHE,0);
-    delay(1750);
     return 1;
 }
 
