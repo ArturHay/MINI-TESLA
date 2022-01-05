@@ -12,13 +12,10 @@
 int main()
 {
 
-    // creation objet en dynamique 
+    // creation objet CVehicule en dynamique 
     CVehicule *vehicule1=new CVehicule();
 
-    // arrete le vehicule pendant 15 seconde
-    vehicule1->deplacer(ARRET, -1, 15000);
-
-   // lancement du programme d'autonomie
+   // Lance le vehicule
     vehicule1->start();
 
     return (0);
