@@ -1,6 +1,5 @@
 #include"CProximite.h"
 
- //Constructeur par defaut car pas de parametre
 CProximite::CProximite()
 {
 }
@@ -19,7 +18,7 @@ CProximite::~CProximite()
 
 }
 
- // conversion de Bit en volts
+ // Conversion nombre sur 8 bits a volts
 double CProximite::conversionBitToVolts(int voltsBit)
 {
     double volts = (VOLT_MAX * voltsBit) / pow(2,BITS);
@@ -29,7 +28,7 @@ double CProximite::conversionBitToVolts(int voltsBit)
 //conversion des volts en distance
 double CProximite::conversionVoltToDistance(double volts)
 {
-    //distance = 63,1 * volts^-1,13
+    //Calcul de la distance: 63,1 * volts^-1,13 
     if(volts < LIMITVOLT){
         return 0;
     }
@@ -37,7 +36,7 @@ double CProximite::conversionVoltToDistance(double volts)
     return(distance);
 }
 
-//Recupere la distance calculer avec le capteur 
+//Renvoie la distance detectée par le capteur
 double CProximite::getDistance()
 {
     //Lecture en volt
