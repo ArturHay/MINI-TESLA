@@ -1,9 +1,9 @@
 #include "CVehicule.h"
-//constucteur 
+//constucteur
 CVehicule::CVehicule()
 {
 	wiringPiSetup();
-	
+
 	pinMode(PIN_DROITE,OUTPUT);
 	pinMode(PIN_GAUCHE,OUTPUT);
 	softPwmCreate(PIN_DROITE,1,200);
@@ -14,7 +14,7 @@ CVehicule::CVehicule()
 	distanceGauche = new CProximite(2);
 
 }
-// destructeur 
+// destructeur
 CVehicule::~CVehicule()
 {
 }
@@ -41,17 +41,20 @@ void CVehicule::start()
             distanceG = distanceGauche->getDistance();
             if(mvGD == -1 && ((distanceD>1 && distanceD<21) || (distanceG>1 && distanceG<21)))
             {
+                printf("Obstacle detecte a: %.2lf cm, on tourne a droite.\n", (distanceD>1 && distanceD<21) ? distanceD : distanceG);
                 reculer(12, 1000);
                 tournerDroite();
                 mvGD = DROITE;
             }
             else if(mvGD == DROITE && ((distanceD>1 && distanceD<21) || (distanceG>1 && distanceG<21)))
             {
+                printf("Obstacle detecte a: %.2lf cm, on fait demi tour.\n", (distanceD>1 && distanceD<21) ? distanceD : distanceG);
                 demiTour();
                 mvGD = GAUCHE;
             }
             else if(mvGD == GAUCHE && ((distanceD>1 && distanceD<21) || (distanceG>1 && distanceG<21)))
             {
+                printf("Obstacle detecte a: %.2lf cm, on tourne a gauche.\n", (distanceD>1 && distanceD<21) ? distanceD : distanceG);
                 tournerGauche();
                 mvGD = GAUCHE;
             }
@@ -62,6 +65,7 @@ void CVehicule::start()
         }
         while(!condition)
         {
+            if(compteur%3 == 0) printf("Aucun obstacle en vue, on avance.\n");
             avancer(30, 50);
             compteur++;
             if(compteur == 10) mvGD = -1;
