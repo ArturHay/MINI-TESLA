@@ -9,7 +9,7 @@ CProximite::CProximite(int p_port)
 {
     m_port = p_port;
     wiringPiSetup();
-    fd = wiringPiI2CSetup(ADRESS);
+    m_fd = wiringPiI2CSetup(ADRESS);
 }
 
 //Destructeur
@@ -40,7 +40,7 @@ double CProximite::conversionVoltToDistance(double volts)
 double CProximite::getDistance()
 {
     //Lecture en volt
-    int voltsBit = wiringPiI2CReadReg8(fd,m_port);
+    int voltsBit = wiringPiI2CReadReg8(m_fd,m_port);
     //Conversion nombre sur 8 bits a volts
     double voltage = conversionBitToVolts(voltsBit);
     //Conversion de volt a cm
