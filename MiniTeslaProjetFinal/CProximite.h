@@ -16,7 +16,7 @@
 class CProximite
 {
 private:
-    int fd;
+    int m_fd;
     // Methode pour convertir le nombre sur 8 bits a volt
     double conversionBitToVolts(int voltsBit);
     //conversion des volts en distance
